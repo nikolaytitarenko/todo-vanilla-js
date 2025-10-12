@@ -1,0 +1,87 @@
+.todo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px;
+    width: 100%;
+    max-width: 400px;
+    padding: 24px;
+    min-height: 420px;
+    border-radius: 25px;
+    box-shadow: 0.6rem 0.6rem 1rem var(--color-grey-light-1),
+    -0.3rem -0.3rem 0.7rem var(--color-grey-light-4);
+
+}
+
+.todo__header{
+    display: flex;
+    justify-content: space-between;
+    width: 96%;
+    gap: 30px;
+    align-items: center;
+    margin-block: 20px;
+}
+
+.todo__title{
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.todo__form{
+    display: flex;
+    width: 100%;
+}
+
+.todo__field{
+    display: flex;
+    width: 100%;
+}
+
+.todo__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.todo__delete-all{
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    color: var(--color-light-1);
+
+    &:hover{
+        color: var(--color-light-2);
+    }
+
+    &:not(.is_visible){
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.todo__list,
+.todo__empty-message{
+    &:empty{
+        display: none;
+    }
+}
+
+.todo__list{
+    --todoListRowGap: 8px;
+
+    width: 100%;
+    display: grid;
+    gap: var(--todoListRowGap);
+}
+
+.todo__empty-message{
+    text-align: center;
+    color: var(--color-light-1);
+}

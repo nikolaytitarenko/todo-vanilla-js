@@ -1,0 +1,51 @@
+.field {
+    position: relative;
+
+    &:has(.field__input:not(:placeholder-shown)) .field__label{
+        top: -11px;
+        font-size: 11px;
+    }
+}
+
+.field__label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    translate: 0 -50%;
+
+
+}
+
+.field__button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    translate: 0 -50%;
+
+    &:hover{
+        background-color: var(--color-light-2);
+    }
+}
+
+.field__input {
+    width: 100%;
+    background-color: var(--color-grey-light-3);
+    height: 40px;
+    border: none;
+    padding: 12px 40px 12px 15px ;
+    color: var(--color-light-1);
+    border-bottom: var(--border);
+
+
+    &:hover,
+    &:focus{
+        outline: none;
+        border-radius: var(--border-radius);
+        box-shadow: 0.13rem 0.13rem 0.13rem var(--color-grey-light-1) inset,
+        -0.13rem -0.13rem 0.13rem var(--color-grey-light-4) inset;
+    }
+
+    &::-webkit-search-cancel-button {
+        display: none;
+    }
+}

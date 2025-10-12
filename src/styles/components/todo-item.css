@@ -1,0 +1,75 @@
+.todo__item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    padding: 10px;
+    min-height: 40px;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    transition-duration: var(--transition-duration);
+
+    &:hover{
+        outline: none;
+        border: 1px solid var(--color-grey-light-2);
+        box-shadow: 0.13rem 0.13rem 0.13rem var(--color-grey-light-1) inset,
+        -0.13rem -0.13rem 0.13rem var(--color-grey-light-4) inset;
+    }
+}
+
+.todo-item__checkbox{
+    appearance: none;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+    border: var(--border);
+    border-radius: 4px;
+
+    &:not(:checked){
+        background-color: var(--color-light-1);
+
+        &::after{
+            opacity: 0;
+        }
+    }
+
+    &:checked{
+        background-color: #632863;
+
+        & + .todo-item__label{
+            color: #632863;
+            text-decoration: line-through;
+        }
+
+        & + .todo-item__delete-button{
+            background-color: #632863;
+        }
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: 16px;
+        height: 16px;
+        background: url("../../icons/check.svg") center/contain no-repeat;
+    }
+}
+
+.todo-item__delete-button{
+    position: absolute;
+    background-color: var(--color-light-1);
+    right: 0;
+    height: 40px;
+    width: 40px;
+    mask: url('../../icons/delete-task-button.svg') no-repeat center;
+    mask-size: 50%;
+
+    &:hover{
+        background-color: var(--color-light-2);
+    }
+}

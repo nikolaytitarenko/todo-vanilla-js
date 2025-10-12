@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+    padding: 100px 30px;
+    color: var(--color-light-1);
+    background-color: var(--color-grey-light-3);
+    font-family: "Inter", sans-serif;
+}
+
+input,
+label,
+button {
+    font-family: inherit;
+    transition-duration: var(--transition-duration);
+}
+
+:focus-visible{
+    outline: solid 1px var(--color-light-1);
+    outline-offset: -2px;
+    transition-duration: 0s !important;
+}
