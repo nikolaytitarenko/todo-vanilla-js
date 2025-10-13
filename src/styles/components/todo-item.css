@@ -15,6 +15,21 @@
         box-shadow: 0.13rem 0.13rem 0.13rem var(--color-grey-light-1) inset,
         -0.13rem -0.13rem 0.13rem var(--color-grey-light-4) inset;
     }
+
+    &.is_disappearing{
+        border: none;
+        pointer-events: none;
+        opacity: 0;
+        translate: 50% 0;
+        transition-duration: calc(var(--transition-duration) * 2);
+
+        & ~ .todo-item {
+            pointer-events: none;
+            translate: 0 calc((100% + var(--todoListRowGap)) * -1);
+            transition-duration: var(--transition-duration);
+            transition-delay: var(--transition-duration);
+        }
+    }
 }
 
 .todo-item__checkbox{
@@ -43,7 +58,7 @@
             text-decoration: line-through;
         }
 
-        & + .todo-item__delete-button{
+        & ~ .todo-item__delete-button{
             background-color: #632863;
         }
     }
@@ -58,6 +73,11 @@
         height: 16px;
         background: url("../../icons/check.svg") center/contain no-repeat;
     }
+}
+
+.todo-item__label{
+    width: 100%;
+    pointer-events: none;
 }
 
 .todo-item__delete-button{
