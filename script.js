@@ -159,7 +159,6 @@ class ToDo {
     if(title.trim().length > 0){
       this.addItem(title);
       this.newTaskInputElement.value = ''
-      this.newTaskInputElement.focus();
     }
   }
 
