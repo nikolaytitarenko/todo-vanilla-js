@@ -129,13 +129,12 @@ class ToDo {
   }
 
   checkedToggle(id){
-    this.state.items.forEach((item) => {
+    this.state.items = this.state.items.map(item => {
       if (item.id === id) {
-        item.isChecked = !item.isChecked
+        return {...item, isChecked: !item.isChecked }
       }
+      return item
     })
-    this.saveItemsFromLocalStorage()
-    this.render()
   }
 
   filter (title) {
@@ -190,6 +189,7 @@ class ToDo {
 
     if(target.matches(this.selectors.itemCheckbox)){
       this.checkedToggle(target.id)
+
     }
   }
 
