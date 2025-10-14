@@ -135,7 +135,10 @@ class ToDo {
       }
       return item
     })
+    this.saveItemsFromLocalStorage()
+    this.render()
   }
+
 
   filter (title) {
     this.state.searchQuery = title
