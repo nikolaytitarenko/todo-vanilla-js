@@ -189,10 +189,11 @@ class ToDo {
         this.deleteItem(taskElement.id)
       }, 500)
     }
+  }
 
+  onCheck = ({ target }) => {
     if(target.matches(this.selectors.itemCheckbox)){
       this.checkedToggle(target.id)
-
     }
   }
 
@@ -208,6 +209,7 @@ class ToDo {
     this.searchTaskFormElement.addEventListener('submit', this.onSearchTask);
     this.searchTaskInputElement.addEventListener('input', this.onSearchInputTask);
     this.listElement.addEventListener('pointerdown', this.onClick);
+    this.listElement.addEventListener('change', this.onCheck);
     this.deleteButtonElement.addEventListener('pointerdown', this.onDeleteAllItems)
   }
 }
