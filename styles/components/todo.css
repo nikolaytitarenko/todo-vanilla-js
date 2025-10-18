@@ -8,7 +8,7 @@
     padding: 24px;
     min-height: 420px;
     border-radius: 25px;
-    box-shadow: 0.6rem 0.6rem 1rem var(--color-grey-light-1),
+    box-shadow: 0.6rem 0.6rem 1rem var(--color-dark-shadow),
     -0.3rem -0.3rem 0.7rem var(--color-grey-light-4);
 
 }
@@ -54,10 +54,10 @@
     padding: 0;
     background-color: transparent;
     border: none;
-    color: var(--color-light-1);
+    color: var(--color-text-1);
 
     &:hover{
-        color: var(--color-light-2);
+        color: var(--color-text-3);
     }
 
     &:not(.is_visible){
@@ -83,5 +83,22 @@
 
 .todo__empty-message{
     text-align: center;
-    color: var(--color-light-1);
+    color: var(--color-text-1);
+}
+
+.todo__theme{
+    height: 25px;
+    width: 25px;
+    mask: url('../../icons/sun-button.svg') no-repeat center;
+    mask-size: cover;
+
+    &:hover{
+        background-color: var(--color-text-3);
+    }
+}
+
+@media (hover: none) {
+    .todo__theme:hover{
+        background-color: var(--color-text-1);
+    }
 }

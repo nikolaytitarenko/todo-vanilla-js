@@ -4,7 +4,7 @@ body{
     align-items: start;
     min-height: 100vh;
     padding: 100px 30px;
-    color: var(--color-light-1);
+    color: var(--color-text-1);
     background-color: var(--color-grey-light-3);
     font-family: "Inter", sans-serif;
 }
@@ -13,11 +13,25 @@ input,
 label,
 button {
     font-family: inherit;
+}
+
+button{
+    border: none;
+    background-color: var(--color-text-1);
     transition-duration: var(--transition-duration);
 }
 
 :focus-visible{
-    outline: solid 1px var(--color-light-1);
+    outline: solid 1px var(--color-text-1);
     outline-offset: -2px;
     transition-duration: 0s !important;
+}
+
+html.light-theme{
+    --color-dark-shadow: #d8d9e6;
+    --color-grey-light-3: #f4f2f2;
+    --color-grey-light-4: #ffffff;
+    --color-text-2: #d985d9;
+
+    --border: 1px solid #c3c0c0;
 }

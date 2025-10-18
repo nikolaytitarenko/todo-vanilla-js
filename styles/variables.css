@@ -1,11 +1,11 @@
 :root{
-    --color-grey-light-1: #161416;
+    --color-dark-shadow: #161416;
     --color-grey-light-2: #20222452;
     --color-grey-light-3: #232526;
     --color-grey-light-4: #484a4c;
-
-    --color-light-1: #9173c5;
-    
+    --color-text-1: #9173c5;
+    --color-text-2: #632863;
+    --color-text-3: #5e31ab;
     --color-light-2: #ededed;
 
     --border: 1px solid var(--color-grey-light-4);
