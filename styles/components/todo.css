@@ -16,7 +16,8 @@
 .todo__header{
     display: flex;
     justify-content: space-between;
-    width: 96%;
+    width: 100%;
+    padding-left: 10px;
     gap: 30px;
     align-items: center;
     margin-block: 20px;
@@ -87,15 +88,16 @@
 }
 
 .todo__theme{
-    height: 25px;
-    width: 25px;
-    mask: url('../../icons/sun-button.svg') no-repeat center;
-    mask-size: cover;
+    height: 40px;
+    width: 40px;
+    mask: url('../../icons/moon-button.svg') no-repeat center;
+    mask-size: 50%;
 
     &:hover{
         background-color: var(--color-text-3);
     }
 }
+
 
 @media (hover: none) {
     .todo__theme:hover{

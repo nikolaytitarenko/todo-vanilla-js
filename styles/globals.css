@@ -34,4 +34,11 @@ html.is_dark-theme{
     --color-text-2: #632863;
 
     --border: 1px solid var(--color-grey-light-4);
+
+    .todo__theme{
+        height: 40px;
+        width: 40px;
+        mask: url('../../icons/sun-button.svg') no-repeat center;
+        mask-size: 50%;
+    }
 }
