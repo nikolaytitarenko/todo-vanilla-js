@@ -14,4 +14,6 @@
     --input-height: 40px;
 
     --transition-duration: 0.2s;
+
+    --icon-theme-url: url('../../icons/moon-button.svg') no-repeat center;
 }

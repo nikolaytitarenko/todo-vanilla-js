@@ -64,10 +64,3 @@
         }
     }
 }
-
-@media (hover: none) {
-    .field__input {
-        border-bottom: var(--border);
-        box-shadow: none;
-    }
-}

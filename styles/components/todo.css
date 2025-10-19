@@ -90,7 +90,7 @@
 .todo__theme{
     height: 40px;
     width: 40px;
-    mask: url('../../icons/moon-button.svg') no-repeat center;
+    mask: var(--icon-theme-url);
     mask-size: 50%;
 
     &:hover{
