@@ -90,17 +90,7 @@
 .todo__theme{
     height: 40px;
     width: 40px;
-    mask: var(--icon-theme-url);
-    mask-size: 50%;
+    background: var(--icon-theme-url);
+    background-size: 20px;
 
-    &:hover{
-        background-color: var(--color-text-3);
-    }
-}
-
-
-@media (hover: none) {
-    .todo__theme:hover{
-        background-color: var(--color-text-1);
-    }
 }

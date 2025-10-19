@@ -15,5 +15,5 @@
 
     --transition-duration: 0.2s;
 
-    --icon-theme-url: url('../../icons/moon-button.svg') no-repeat center;
+    --icon-theme-url: url('../../icons/moon-button.svg') right 8px center no-repeat;
 }

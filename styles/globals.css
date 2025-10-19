@@ -35,5 +35,5 @@ html.is_dark-theme{
 
     --border: 1px solid var(--color-grey-light-4);
 
-    --icon-theme-url: url('../../icons/sun-button.svg') no-repeat center;
+    --icon-theme-url: url('../../icons/sun-button.svg') right 8px center no-repeat;
 }
