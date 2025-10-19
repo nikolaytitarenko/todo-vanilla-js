@@ -90,6 +90,6 @@
 .todo__theme{
     height: 40px;
     width: 40px;
-    background: var(--icon-theme-url);
+    background: url('../../icons/moon-button.svg') right 8px center no-repeat;
     background-size: 20px;
 }
