@@ -92,4 +92,13 @@
     width: 40px;
     background: url('../../icons/moon-button.svg') right 8px center no-repeat;
     background-size: 20px;
+    transition-duration: 0s !important;
+}
+
+.todo__theme.is_dark-theme-button{
+    height: 40px;
+    width: 40px;
+    background: url('../../icons/sun-button.svg') right 8px center no-repeat;
+    background-size: 20px;
+    transition-duration: 0s !important;
 }

@@ -19,6 +19,7 @@ class ToDo {
     isVisible: 'is_visible',
     isDisappearing: 'is_disappearing',
     isDarkTheme: 'is_dark-theme',
+    isDarkThemeButton: 'is_dark-theme-button',
   }
 
   stateTheme = {
@@ -84,14 +85,17 @@ class ToDo {
     this.isDarkTheme
 
     document.documentElement.classList.toggle(this.stateClasses.isDarkTheme, this.isDarkTheme)
+    this.themeSwitcherElement.classList.toggle(this.stateClasses.isDarkThemeButton, this.isDarkTheme)
   }
 
   onThemeSwitch = () => {
     document.documentElement.classList.toggle(this.stateClasses.isDarkTheme, !this.isDarkTheme)
+
     !this.isDarkTheme
       ? localStorage.setItem(this.localStorageKey.theme, JSON.stringify(this.stateTheme.dark))
       : localStorage.setItem(this.localStorageKey.theme, JSON.stringify(this.stateTheme.light))
 
+    this.themeSwitcherElement.classList.toggle(this.stateClasses.isDarkThemeButton)
   }
 
 
