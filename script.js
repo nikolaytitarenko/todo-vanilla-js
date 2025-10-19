@@ -31,7 +31,6 @@ class ToDo {
     theme: 'theme',
   }
 
-
   constructor() {
     this.rootElement = document.querySelector(this.selectors.root)
     this.themeSwitcherElement = document.querySelector(this.selectors.theme)
@@ -51,6 +50,7 @@ class ToDo {
       filteredItems: null,
       searchQuery: '',
     }
+    this.initialTheme()
     this.render()
     this.bindEvents()
   }
@@ -74,6 +74,26 @@ class ToDo {
   saveItemsFromLocalStorage() {
     localStorage.setItem(this.localStorageKey.todoItem, JSON.stringify(this.state.items))
   }
+
+  get isDarkTheme() {
+    const parsedDataTheme = JSON.parse(localStorage.getItem(this.localStorageKey.theme))
+    return parsedDataTheme === this.stateTheme.dark
+  }
+
+  initialTheme(){
+    this.isDarkTheme
+
+    document.documentElement.classList.toggle(this.stateClasses.isDarkTheme, this.isDarkTheme)
+  }
+
+  onThemeSwitch = () => {
+    document.documentElement.classList.toggle(this.stateClasses.isDarkTheme, !this.isDarkTheme)
+    !this.isDarkTheme
+      ? localStorage.setItem(this.localStorageKey.theme, JSON.stringify(this.stateTheme.dark))
+      : localStorage.setItem(this.localStorageKey.theme, JSON.stringify(this.stateTheme.light))
+
+  }
+
 
   render() {
     this.totalTasksElement.textContent = this.state.items.length
@@ -211,6 +231,7 @@ class ToDo {
     this.listElement.addEventListener('pointerdown', this.onClick);
     this.listElement.addEventListener('change', this.onCheck);
     this.deleteButtonElement.addEventListener('pointerdown', this.onDeleteAllItems)
+    this.themeSwitcherElement.addEventListener('pointerdown',this.onThemeSwitch)
   }
 }
 

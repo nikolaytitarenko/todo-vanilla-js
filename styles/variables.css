@@ -1,14 +1,14 @@
 :root{
-    --color-dark-shadow: #161416;
+    --color-dark-shadow: #d8d9e6;
     --color-grey-light-2: #20222452;
-    --color-grey-light-3: #232526;
-    --color-grey-light-4: #484a4c;
+    --color-grey-light-3: #f4f2f2;
+    --color-grey-light-4: #ffffff;
     --color-text-1: #9173c5;
-    --color-text-2: #632863;
+    --color-text-2: #d985d9;
     --color-text-3: #5e31ab;
     --color-light-2: #ededed;
 
-    --border: 1px solid var(--color-grey-light-4);
+    --border: 1px solid #c3c0c0;
     --border-radius: 10px;
 
     --input-height: 40px;
